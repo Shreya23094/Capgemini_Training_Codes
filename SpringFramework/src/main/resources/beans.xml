@@ -1,0 +1,16 @@
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="myxmlStringBuilder" class="java.lang.StringBuilder">
+        <constructor-arg value="Hello from xml string builder"/>
+    </bean>
+
+    <bean id="myXmlCalc" class="com.gal.algo.MyCalc" scope = "singleton" lazy-init="false" destroy-method="onDestroy" init-method="onInit">
+<!--        <constructor-arg ref="myxmlStringBuilder"/>-->
+    </bean>
+
+</beans>
